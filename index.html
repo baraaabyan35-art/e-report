@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDN E-Report 2026 | Portal Pengaduan & Fasilitas Siswa</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/idn logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom Design System Stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="./assets/images/idn logo.png"
+            alt="Logo IDN"
+            class="brand-icon"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-primary lh-1">IDN E-Report</span>
+            <small class="text-muted" style="font-size: 0.68rem; letter-spacing: 0.05em;">SMK IDN 2026</small>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2 pt-3 pt-lg-0 text-center align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#recent">Laporan Terbaru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-primary" href="panduan.html">
+                <i class="fa-solid fa-book-open me-1"></i> Panduan Pengguna
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a class="btn btn-primary nav-cta" href="reports.html">
+                <i class="fa-solid fa-plus-circle me-1"></i> Buat Laporan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7 text-center text-lg-start animate__animated animate__fadeInLeft">
+            <div class="hero-pill">
+              <i class="fa-solid fa-shield-halved text-primary"></i>
+              Portal Resmi Aspirasi & Fasilitas IDN Boarding School
+            </div>
+            <h1 class="hero-title">
+              Sampaikan Pengaduan, <br />
+              Wujudkan Fasilitas <span class="text-primary">Terbaik</span>.
+            </h1>
+            <p class="hero-lead">
+              Platform resmi santri untuk melaporkan kendala fasilitas, akademik, dan asrama secara transparan, cepat, dan terpercaya.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a class="btn btn-primary btn-pill px-4 py-2" href="reports.html">
+                <i class="fa-solid fa-paper-plane me-2"></i> Laporkan Masalah
+              </a>
+              <a class="btn btn-outline-primary btn-pill px-4 py-2" href="panduan.html">
+                <i class="fa-solid fa-circle-question me-2"></i> Panduan Pengguna
+              </a>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="hero-stats-strip justify-content-center justify-content-lg-start">
+              <div class="hero-stat-item">
+                <h4>150+</h4>
+                <p>Laporan Dituntaskan</p>
+              </div>
+              <div class="hero-stat-item">
+                <h4>98%</h4>
+                <p>Respon Tepat Waktu</p>
+              </div>
+              <div class="hero-stat-item">
+                <h4>&lt; 24 Jam</h4>
+                <p>Rata-rata Penanganan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center animate__animated animate__fadeInRight">
+            <div class="hero-img-container d-inline-block">
+              <img
+                src="assets/images/hero pic.png"
+                alt="Ilustrasi IDN E-Report"
+                class="img-fluid"
+              />
+              <div class="hero-floating-card d-none d-sm-flex">
+                <div class="rounded-circle bg-success-subtle text-success d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                  <i class="fa-solid fa-check-double fa-lg"></i>
+                </div>
+                <div class="text-start">
+                  <div class="fw-bold" style="font-size: 0.9rem;">Status Sarpras Aktif</div>
+                  <small class="text-muted" style="font-size: 0.75rem;">Tim siap tindak lanjut 24/7</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="about" class="bg-white">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-duration="800">
+            <div class="text-center text-lg-start pe-lg-4">
+              <span class="badge-pill-custom badge-tag-academic mb-3">
+                <i class="fa-solid fa-circle-info"></i> Profil Sistem
+              </span>
+              <h2 class="display-6 fw-bold mb-3">Tentang IDN E-Report</h2>
+              <p class="lh-lg mb-4">
+                IDN E-Report dikembangkan sebagai jembatan komunikasi digital antara santri, guru, dan tim sarana prasarana SMK IDN Boarding School. Sistem ini dirancang untuk memastikan setiap fasilitas pembelajaran seperti laboratorium komputer, ruang kelas, jaringan internet, hingga sarana ibadah dan asrama tetap terjaga dalam kondisi prima.
+              </p>
+              <div class="row g-3 text-start">
+                <div class="col-sm-6">
+                  <div class="p-3 rounded-3 bg-light border">
+                    <div class="text-primary mb-2">
+                      <i class="fa-solid fa-bolt-lightning fa-lg"></i>
+                    </div>
+                    <h6 class="fw-bold mb-1">Cepat & Terarah</h6>
+                    <small class="text-muted">Laporan langsung masuk ke tim teknisi terkait sesuai kategori.</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-3 rounded-3 bg-light border">
+                    <div class="text-primary mb-2">
+                      <i class="fa-solid fa-eye fa-lg"></i>
+                    </div>
+                    <h6 class="fw-bold mb-1">Transparan 100%</h6>
+                    <small class="text-muted">Progres penanganan dapat dipantau langsung dari tiket laporan.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+            <img
+              src="assets/images/about pic.png"
+              alt="Tentang IDN E-Report"
+              class="img-fluid rounded-4 shadow-sm"
+              style="max-height: 420px; object-fit: contain;"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layanan Kami Section -->
+    <section id="services">
+      <div class="container">
+        <div class="text-center max-w-2xl mx-auto mb-5" data-aos="fade-up" data-aos-duration="700">
+          <span class="badge-pill-custom badge-tag-academic mb-2">
+            <i class="fa-solid fa-cubes"></i> Kategori Layanan
+          </span>
+          <h2 class="display-6 fw-bold">Layanan Pengaduan Terpadu</h2>
+          <p class="text-muted">
+            Pilih kategori laporan yang sesuai agar penanganan dapat dilakukan secara akurat oleh divisi terkait.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h4 class="fw-bold">Pengaduan Fasilitas</h4>
+              <p class="text-muted mb-4">
+                Penanganan kerusakan proyektor, pendingin ruangan (AC), kelistrikan kelas, keran air tempat wudhu, meja kursi, serta sarana kamar asrama santri.
+              </p>
+              <a href="reports.html" class="btn btn-sm btn-outline-primary rounded-pill">
+                Lihat Laporan Fasilitas <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h4 class="fw-bold">Pengaduan Akademik</h4>
+              <p class="text-muted mb-4">
+                Pelaporan kendala seputar perangkat lab komputer, koneksi internet server praktek, modul pembelajaran, maupun jadwal pembelajaran kejuruan RPL.
+              </p>
+              <a href="reports.html" class="btn btn-sm btn-outline-primary rounded-pill">
+                Lihat Laporan Akademik <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <h4 class="fw-bold">Aspirasi & Privasi Terjaga</h4>
+              <p class="text-muted mb-4">
+                Penyampaian masukan dan kritik konstruktif untuk pengelola sekolah dengan perlindungan data dan privasi pelapor yang terjamin keamanannya.
+              </p>
+              <a href="panduan.html" class="btn btn-sm btn-outline-primary rounded-pill">
+                Panduan Privasi <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Banner Panduan Pengguna -->
+    <section class="py-4">
+      <div class="container" data-aos="zoom-in" data-aos-duration="800">
+        <div class="guide-banner-card">
+          <div class="row align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+              <span class="badge bg-white text-primary fw-bold px-3 py-2 rounded-pill mb-3">
+                <i class="fa-solid fa-book-bookmark me-1"></i> Panduan Pengguna Baru
+              </span>
+              <h2 class="fw-bold text-white mb-2">Baru Pertama Kali Ingin Melaporkan?</h2>
+              <p class="text-white-50 mb-0 pe-lg-5">
+                Ketahui alur 4 langkah pelaporan, ketentuan foto bukti pendukung, dan standar waktu tanggap penanganan (SLA) agar laporanmu langsung diproses cepat.
+              </p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+              <a href="panduan.html" class="btn btn-light text-primary btn-pill fw-bold px-4 py-3 shadow">
+                <i class="fa-solid fa-arrow-up-right-from-square me-2"></i> Buka Panduan Pengguna
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Reports Section -->
+    <section id="recent" class="bg-white">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5" data-aos="fade-up" data-aos-duration="700">
+          <div>
+            <span class="badge-pill-custom badge-tag-facility mb-2">
+              <i class="fa-solid fa-clock-rotate-left"></i> Pembaruan Terkini
+            </span>
+            <h2 class="display-6 fw-bold mb-1">Laporan Terbaru</h2>
+            <p class="text-muted mb-0">Daftar aspirasi dan kendala sarana yang baru saja dilaporkan siswa.</p>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <a href="reports.html" class="btn btn-outline-primary btn-pill">
+              Semua Laporan (9+) <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Report 1 -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-wrench me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/kelas rusak.jpeg"
+                  class="card-img-top"
+                  alt="Laporan Proyektor Kelas"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Proyektor & Kabel VGA Ruang X RPL C Tidak Menyala</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>2 jam yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Proyektor gantung ruang kelas teori mati mendadak saat sesi coding. Lampu indikator berkedip merah dan butuh pengecekan adaptor daya.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1048</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Detail Laporan <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report 2 -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-faucet-drip me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-resolved">
+                  <i class="fa-solid fa-circle-check me-1"></i> Selesai Ditangani
+                </span>
+                <img
+                  src="./assets/images/keran rusak.jpeg"
+                  class="card-img-top"
+                  alt="Keran Wudhu Masjid Bocor"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Keran Air Tempat Wudhu Masjid Timur Bocor Deras</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>5 jam yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Keran air nomor 3 pada saf wudhu bagian timur patah dratnya sehingga air mengalir terus dan membasahi area pelataran masjid.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1045</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Detail Laporan <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report 3 -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-snowflake me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/ac_rusak.jpg"
+                  class="card-img-top"
+                  alt="AC Lab Komputer Menetes"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">AC Lab Komputer Gedung B Meneteskan Air ke Meja</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>1 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Unit AC indoor sebelah utara bocor air pembuangan dan menetes tepat di atas meja praktik santri, berisiko terhadap kabel komputer.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1041</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Detail Laporan <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a class="btn btn-outline-primary btn-pill px-4" href="reports.html">
+            Jelajahi Arsip Semua Laporan <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="container">
+        <div class="text-center max-w-2xl mx-auto mb-5" data-aos="fade-up" data-aos-duration="700">
+          <span class="badge-pill-custom badge-tag-academic mb-2">
+            <i class="fa-solid fa-circle-question"></i> Bantuan & Informasi
+          </span>
+          <h2 class="display-6 fw-bold">Pertanyaan yang Sering Diajukan</h2>
+          <p class="text-muted">
+            Temukan jawaban lengkap seputar pengoperasian platform IDN E-Report dan penanganan sarana sekolah.
+          </p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="800">
+          <div class="col-lg-10">
+            <div class="accordion" id="accordionFAQ">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                    aria-expanded="true"
+                    aria-controls="faq1"
+                  >
+                    <i class="fa-solid fa-circle-question text-primary me-2"></i>
+                    Apa fungsi utama dari platform IDN E-Report?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    IDN E-Report adalah sistem informasi pengaduan resmi SMK IDN Boarding School untuk memfasilitasi santri dan pengajar dalam melaporkan kerusakan sarana belajar, fasilitas asrama, kendala laboratorium, serta aspirasi umum. Sistem ini mempercepat respon perbaikan secara digital tanpa perlu surat manual.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                    aria-expanded="false"
+                    aria-controls="faq2"
+                  >
+                    <i class="fa-solid fa-file-signature text-primary me-2"></i>
+                    Bagaimana alur dan tata cara membuat laporan baru?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    Cukup klik tombol <strong>"Buat Laporan"</strong> di menu navigasi atau halaman Semua Laporan. Tulis judul yang spesifik (misal: "AC Lab RPL Bocor"), pilih kategori yang relevan, jelaskan detail lokasi dan kronologi, lalu lampirkan foto dokumentasi kondisi terkini sebagai bukti pendukung.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                    aria-expanded="false"
+                    aria-controls="faq3"
+                  >
+                    <i class="fa-solid fa-building-circle-check text-primary me-2"></i>
+                    Fasilitas apa saja yang dapat dilaporkan di aplikasi ini?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    Semua fasilitas di lingkungan kampus IDN Boarding School: ruang kelas (meja, kursi, papan tulis, proyektor), sarana ibadah/masjid (kran wudhu, sound system), kamar asrama (pintu, jendela, kelistrikan), serta laboratorium IT (jaringan kabel LAN, router Wi-Fi, dan pendingin ruangan).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                    aria-expanded="false"
+                    aria-controls="faq4"
+                  >
+                    <i class="fa-solid fa-user-gear text-primary me-2"></i>
+                    Siapa yang menindaklanjuti dan memperbaiki laporan saya?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    Laporan akan diverifikasi oleh Admin Sistem dan diteruskan ke divisi terkait: Tim Sarana Prasarana (Sarpras) untuk fasilitas fisik, Tim IT Infrastruktur untuk lab & jaringan internet, atau Bagian Kurikulum untuk kebutuhan perangkat akademik.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                    aria-expanded="false"
+                    aria-controls="faq5"
+                  >
+                    <i class="fa-solid fa-stopwatch text-primary me-2"></i>
+                    Berapa lama standar waktu penyelesaian laporan?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    Untuk kondisi darurat (kebocoran pipa air, korsleting listrik) respon dilakukan dalam waktu kurang dari 2 jam. Untuk perbaikan fasilitas umum (AC, proyektor, engsel pintu) ditangani dalam kurun waktu 12 hingga 24 jam hari kerja.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq6"
+                    aria-expanded="false"
+                    aria-controls="faq6"
+                  >
+                    <i class="fa-solid fa-camera text-primary me-2"></i>
+                    Mengapa foto dokumentasi fisik sangat disarankan saat melapor?
+                  </button>
+                </h2>
+                <div
+                  id="faq6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSix"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body">
+                    Foto membantu teknisi mendiagnosa tingkat kerusakan dan membawa peralatan serta suku cadang pengganti yang tepat sebelum menuju lokasi, sehingga proses perbaikan menjadi jauh lebih cepat dan akurat.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-lg-4 text-white">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <img
+                class="rounded"
+                src="./assets/images/logo idn footer.jpeg"
+                width="36"
+                height="36"
+                alt="Logo IDN"
+              />
+              <span class="footer-brand-title">IDN E-Report</span>
+            </div>
+            <p class="footer-desc">
+              Portal pengaduan fasilitas dan akademik resmi SMK IDN Boarding School. Mewujudkan lingkungan belajar yang nyaman, modern, dan tanggap sarana bagi seluruh santri.
+            </p>
+            <div class="d-flex gap-2 mt-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                <i class="fa-solid fa-code me-1"></i> Edisi 2026
+              </span>
+              <span class="badge bg-success-subtle text-success border border-success-subtle">
+                <i class="fa-solid fa-server me-1"></i> Sistem Aktif
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <h5 class="footer-heading">Navigasi</h5>
+            <div class="d-flex flex-column gap-2">
+              <a class="footer-link" href="index.html">
+                <i class="fa-solid fa-angle-right"></i> Beranda
+              </a>
+              <a class="footer-link" href="#about">
+                <i class="fa-solid fa-angle-right"></i> Tentang Kami
+              </a>
+              <a class="footer-link" href="#services">
+                <i class="fa-solid fa-angle-right"></i> Layanan
+              </a>
+              <a class="footer-link" href="reports.html">
+                <i class="fa-solid fa-angle-right"></i> Semua Laporan
+              </a>
+              <a class="footer-link text-white fw-bold" href="panduan.html">
+                <i class="fa-solid fa-book-open"></i> Panduan Pengguna
+              </a>
+              <a class="footer-link" href="#faq">
+                <i class="fa-solid fa-angle-right"></i> FAQ
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-heading">Kontak & Helpdesk</h5>
+            <div class="d-flex flex-column">
+              <a class="footer-contact-item" href="mailto:reportidn@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>reportidn@gmail.com</span>
+              </a>
+              <a
+                target="_blank"
+                class="footer-contact-item"
+                href="https://wa.me/+6282125748970"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+62 821-2574-8970 (Hotline Sarpras)</span>
+              </a>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. Raya Dayeuh, Desa Sukanegara, Kec. Jonggol, Kab. Bogor, Jawa Barat 16830.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 copyright-text">
+          <p class="mb-0">
+            &copy; 2026 IDN E-Report. Dikelola & Diterbitkan oleh <strong class="text-white">Baraa Abyan</strong> bersama Tim RPL C Class.
+          </p>
+          <p class="mb-0 text-white-50">
+            SMK IDN Boarding School Jonggol. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Kembali ke atas" aria-label="Kembali ke atas">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 80,
+      });
+
+      // Back to top & Navbar scroll effect
+      const backToTopBtn = document.getElementById('backToTop');
+      const navbar = document.querySelector('.navbar-custom');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 250) {
+          backToTopBtn.classList.add('show');
+          navbar.classList.add('scrolled');
+        } else {
+          backToTopBtn.classList.remove('show');
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semua Laporan | IDN E-Report 2026</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/idn logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="./assets/images/idn logo.png"
+            alt="Logo IDN"
+            class="brand-icon"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-primary lh-1">IDN E-Report</span>
+            <small class="text-muted" style="font-size: 0.68rem; letter-spacing: 0.05em;">SMK IDN 2026</small>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2 pt-3 pt-lg-0 text-center align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="reports.html">Semua Laporan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-primary" href="panduan.html">
+                <i class="fa-solid fa-book-open me-1"></i> Panduan Pengguna
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#faq">FAQ</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#tambahLaporanModal"
+                class="btn btn-primary nav-cta"
+              >
+                <i class="fa-solid fa-plus-circle me-1"></i> Buat Laporan
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Semua Laporan</li>
+          </ol>
+        </nav>
+
+        <!-- Header Row -->
+        <div class="row align-items-center justify-content-between g-4 mb-4">
+          <div class="col-lg-8 text-center text-lg-start">
+            <span class="badge-pill-custom badge-tag-academic mb-2">
+              <i class="fa-solid fa-database"></i> Database Pengaduan
+            </span>
+            <h1 class="display-6 fw-bold text-slate-900 mb-2">Semua Laporan Siswa</h1>
+            <p class="text-muted mb-0">
+              Pantau keterbukaan informasi penanganan fasilitas asrama, laboratorium, ruang kelas, dan sarana umum SMK IDN Boarding School.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#tambahLaporanModal"
+              class="btn btn-primary btn-pill px-4 py-2 shadow"
+            >
+              <i class="fa-solid fa-file-circle-plus me-2"></i> Tambah Laporan Baru
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Box -->
+        <div class="filter-search-box">
+          <div class="row g-3 align-items-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0 text-muted">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="form-control border-start-0"
+                  placeholder="Cari judul atau kata kunci laporan..."
+                />
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <select id="categoryFilter" class="form-select">
+                <option value="all">Semua Kategori</option>
+                <option value="fasilitas">Kategori: Fasilitas</option>
+                <option value="akademik">Kategori: Akademik</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <select id="statusFilter" class="form-select">
+                <option value="all">Semua Status</option>
+                <option value="proses">Dalam Penanganan</option>
+                <option value="selesai">Selesai Ditangani</option>
+                <option value="verifikasi">Menunggu Review</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <button id="resetFilterBtn" class="btn btn-outline-secondary w-100">
+                <i class="fa-solid fa-rotate-left me-1"></i> Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Counter Indicator -->
+          <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top text-muted small">
+            <div>
+              Menampilkan <strong id="visibleCount" class="text-primary">9</strong> dari 9 laporan
+            </div>
+            <div>
+              <span class="badge bg-success-subtle text-success me-1">● Selesai: 4</span>
+              <span class="badge bg-warning-subtle text-warning me-1">● Proses: 4</span>
+              <span class="badge bg-primary-subtle text-primary">● Review: 1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification Toast Banner if newly submitted -->
+        <div id="submitAlert" class="alert alert-success alert-dismissible fade d-none mb-4 shadow-sm" role="alert">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-circle-check fa-lg"></i>
+            <div>
+              <strong>Laporan Berhasil Terkirim!</strong> Tiket laporan atas nama <strong>Baraa Abyan</strong> telah ditambahkan ke sistem dan siap diverifikasi oleh Sarpras.
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Reports Grid -->
+        <div id="reportsContainer" class="row g-4 mb-5">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="proses">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-wrench me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/kelas rusak.jpeg"
+                  class="card-img-top"
+                  alt="Proyektor Rusak"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Proyektor Ruang Kelas X RPL C Rusak & Mati Total</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>2 jam yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Unit proyektor gantung mati tiba-tiba saat jam pelajaran praktikum web. Lampu indikator berkedip merah dan tidak memancarkan sinyal HDMI.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1048</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="selesai">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-faucet-drip me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-resolved">
+                  <i class="fa-solid fa-circle-check me-1"></i> Selesai Ditangani
+                </span>
+                <img
+                  src="./assets/images/keran rusak.jpeg"
+                  class="card-img-top"
+                  alt="Keran Wudhu Masjid Bocor"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Keran Air Tempat Wudhu Masjid Timur Bocor Deras</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>5 jam yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Pipa sambungan kran wudhu santri nomor 3 patah sehingga semburan air membanjiri selasar masjid. Telah diganti dengan ball-valve kuningan baru.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1045</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="proses">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-snowflake me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/ac_rusak.jpg"
+                  class="card-img-top"
+                  alt="AC Lab Bocor"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Pendingin Ruangan (AC) Lab Komputer Gedung B Bocor</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>1 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Unit AC indoor sebelah utara bocor air pembuangan dan menetes tepat di atas meja PC praktikum santri. Sedang dijadwalkan servis cuci pipa evaporator.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1041</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="akademik" data-status="verifikasi">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-network-wired me-1"></i> Akademik
+                </span>
+                <span class="badge-overlay-status badge-status-pending">
+                  <i class="fa-solid fa-magnifying-glass me-1"></i> Menunggu Review
+                </span>
+                <img
+                  src="./assets/images/lab_router.jpg"
+                  class="card-img-top"
+                  alt="Router Jaringan Putus"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Koneksi Router Jaringan LAN Lab IoT Terputus</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>1 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Switch manageable dan kabel ethernet switch rack lab IoT padam lampu indikatornya, mengakibatkan praktikum mikrokontroler siswa terhenti.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1039</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="selesai">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-door-open me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-resolved">
+                  <i class="fa-solid fa-circle-check me-1"></i> Selesai Ditangani
+                </span>
+                <img
+                  src="./assets/images/kelas rusak.jpeg"
+                  class="card-img-top"
+                  alt="Gagang Pintu Rusak"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Gagang Pintu Kamar Asrama 204 Macet & Longgar</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>2 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Kunci silinder sering tersendat saat santri hendak keluar kamar untuk sholat subuh. Telah diganti dengan handle set stainless steel baru.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1035</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="akademik" data-status="proses">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-keyboard me-1"></i> Akademik
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/malingg.png"
+                  class="card-img-top"
+                  alt="Inventaris Lab Hilang"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Perlengkapan Mouse & Keyboard Lab 3 Perlu Pengecekan</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>3 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Sebanyak 2 set mouse dan keyboard di deret komputer belakang hilang dari meja setelah jam belajar malam. Sedang ditelusuri lewat log absensi lab.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1031</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="selesai">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-lightbulb me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-resolved">
+                  <i class="fa-solid fa-circle-check me-1"></i> Selesai Ditangani
+                </span>
+                <img
+                  src="./assets/images/ac_rusak.jpg"
+                  class="card-img-top"
+                  alt="Lampu Koridor Redup"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Lampu Penerangan Koridor Lantai 2 Gedung Asrama Redup</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>3 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Lampu TL LED koridor penghubung asrama berkedip kencang saat malam hari sehingga membahayakan santri. Teknisi telah memasang trafo LED pengganti.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1027</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="fasilitas" data-status="selesai">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-glass-water me-1"></i> Fasilitas
+                </span>
+                <span class="badge-overlay-status badge-status-resolved">
+                  <i class="fa-solid fa-circle-check me-1"></i> Selesai Ditangani
+                </span>
+                <img
+                  src="./assets/images/keran rusak.jpeg"
+                  class="card-img-top"
+                  alt="Dispenser Air Macet"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Kran Dispenser Air Minum Santri Lantai 1 Macet</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>4 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Tuas kran air minum santri patah pada bagian pengait pegas. Bagian sarpras telah mengganti satu set tuas dispenser higienis baru.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1022</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="col-12 col-md-6 col-lg-4 report-item" data-category="akademik" data-status="proses">
+            <div class="card h-100">
+              <div class="card-img-wrapper">
+                <span class="badge-overlay">
+                  <i class="fa-solid fa-chair me-1"></i> Akademik
+                </span>
+                <span class="badge-overlay-status badge-status-in-progress">
+                  <i class="fa-solid fa-clock me-1"></i> Dalam Penanganan
+                </span>
+                <img
+                  src="./assets/images/kelas rusak.jpeg"
+                  class="card-img-top"
+                  alt="Kursi Kelas Rusak"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Kekurangan Kursi Ergonomis di Ruang Diskusi Teori RPL</h5>
+                <div class="card-author-meta">
+                  <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                  <span>•</span>
+                  <span>5 hari yang lalu</span>
+                </div>
+                <p class="card-text text-muted flex-grow-1">
+                  Sebanyak 4 kursi belajar mengalami kerusakan hidrolik dan roda macet saat kegiatan pair programming. Sedang diajukan peremajaan unit oleh kurikulum.
+                </p>
+                <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                  <span class="badge bg-light text-secondary border">#REP-1018</span>
+                  <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                    Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="noResults" class="text-center py-5 d-none">
+          <div class="text-muted mb-3">
+            <i class="fa-regular fa-folder-open fa-3x"></i>
+          </div>
+          <h4 class="fw-bold">Tidak ada laporan yang cocok</h4>
+          <p class="text-muted">Coba ubah kata kunci pencarian atau reset filter kategori.</p>
+          <button id="resetFromEmptyBtn" class="btn btn-outline-primary btn-sm rounded-pill">
+            Reset Semua Filter
+          </button>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Navigasi Halaman Laporan" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Sebelumnya</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Selanjutnya</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+    <!-- Modal Tambah Laporan -->
+    <div
+      class="modal fade"
+      id="tambahLaporanModal"
+      tabindex="-1"
+      aria-labelledby="tambahLaporanModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: var(--radius-lg);">
+          <div class="modal-header bg-primary text-white py-3 px-4">
+            <h5 class="modal-title fw-bold" id="tambahLaporanModalLabel">
+              <i class="fa-solid fa-pen-to-square me-2"></i> Formulir Pengaduan Sarana IDN
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <form id="laporanForm">
+            <div class="modal-body p-4 p-md-5">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Nama Pelapor <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="namaPelapor"
+                    class="form-control"
+                    value="Baraa Abyan"
+                    readonly
+                  />
+                  <small class="text-muted" style="font-size: 0.78rem;">Otomatis teridentifikasi sebagai Baraa Abyan.</small>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Kategori Pengaduan <span class="text-danger">*</span>
+                  </label>
+                  <select id="modalKategori" class="form-select" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="fasilitas" selected>Fasilitas (Kelas, Lab, Asrama, Masjid)</option>
+                    <option value="akademik">Akademik (Kurikulum & Perlengkapan IT)</option>
+                    <option value="privasi">Privasi Terjaga / Aspirasi Khusus</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Judul Laporan <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="modalJudul"
+                    class="form-control"
+                    placeholder="Contoh: Kran Air Wudhu Samping Masjid Patah"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Lokasi Spesifik <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="modalLokasi"
+                    class="form-control"
+                    placeholder="Contoh: Gedung B, Lantai 2, Ruang Lab 3"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Tingkat Urgensi
+                  </label>
+                  <select id="modalUrgensi" class="form-select">
+                    <option value="sedang">Sedang (Bisa digunakan terbatas)</option>
+                    <option value="tinggi">Tinggi (Mengganggu kegiatan belajar)</option>
+                    <option value="darurat">Darurat (Kebocoran/Korsleting listrik)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Detail & Kronologi Masalah <span class="text-danger">*</span>
+                  </label>
+                  <textarea
+                    id="modalDeskripsi"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Jelaskan secara jelas kondisi kerusakan, kapan pertama kali terjadi, dan dampaknya..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold text-slate-800">
+                    Unggah Foto Bukti Fisik <span class="text-muted font-normal">(Disarankan)</span>
+                  </label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="modalFoto"
+                    accept="image/*"
+                  />
+                  <small class="text-muted" style="font-size: 0.78rem;">Format didukung: JPG, PNG, WEBP (Maks. 5MB).</small>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-light px-4 py-3">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                <i class="fa-solid fa-paper-plane me-2"></i> Kirim Laporan Sekarang
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-lg-4 text-white">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <img
+                class="rounded"
+                src="./assets/images/logo idn footer.jpeg"
+                width="36"
+                height="36"
+                alt="Logo IDN"
+              />
+              <span class="footer-brand-title">IDN E-Report</span>
+            </div>
+            <p class="footer-desc">
+              Portal pengaduan fasilitas dan akademik resmi SMK IDN Boarding School. Mewujudkan lingkungan belajar yang nyaman, modern, dan tanggap sarana bagi seluruh santri.
+            </p>
+            <div class="d-flex gap-2 mt-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                <i class="fa-solid fa-code me-1"></i> Edisi 2026
+              </span>
+              <span class="badge bg-success-subtle text-success border border-success-subtle">
+                <i class="fa-solid fa-server me-1"></i> Sistem Aktif
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <h5 class="footer-heading">Navigasi</h5>
+            <div class="d-flex flex-column gap-2">
+              <a class="footer-link" href="index.html">
+                <i class="fa-solid fa-angle-right"></i> Beranda
+              </a>
+              <a class="footer-link" href="index.html#about">
+                <i class="fa-solid fa-angle-right"></i> Tentang Kami
+              </a>
+              <a class="footer-link" href="index.html#services">
+                <i class="fa-solid fa-angle-right"></i> Layanan
+              </a>
+              <a class="footer-link text-white fw-bold" href="reports.html">
+                <i class="fa-solid fa-angle-right"></i> Semua Laporan
+              </a>
+              <a class="footer-link" href="panduan.html">
+                <i class="fa-solid fa-book-open"></i> Panduan Pengguna
+              </a>
+              <a class="footer-link" href="index.html#faq">
+                <i class="fa-solid fa-angle-right"></i> FAQ
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-heading">Kontak & Helpdesk</h5>
+            <div class="d-flex flex-column">
+              <a class="footer-contact-item" href="mailto:reportidn@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>reportidn@gmail.com</span>
+              </a>
+              <a
+                target="_blank"
+                class="footer-contact-item"
+                href="https://wa.me/+6282125748970"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+62 821-2574-8970 (Hotline Sarpras)</span>
+              </a>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. Raya Dayeuh, Desa Sukanegara, Kec. Jonggol, Kab. Bogor, Jawa Barat 16830.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 copyright-text">
+          <p class="mb-0">
+            &copy; 2026 IDN E-Report. Dikelola & Diterbitkan oleh <strong class="text-white">Baraa Abyan</strong> bersama Tim RPL C Class.
+          </p>
+          <p class="mb-0 text-white-50">
+            SMK IDN Boarding School Jonggol. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" title="Kembali ke atas">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Interactive Filtering & Form JS -->
+    <script>
+      const searchInput = document.getElementById('searchInput');
+      const categoryFilter = document.getElementById('categoryFilter');
+      const statusFilter = document.getElementById('statusFilter');
+      const resetBtn = document.getElementById('resetFilterBtn');
+      const resetFromEmptyBtn = document.getElementById('resetFromEmptyBtn');
+      const reportItems = document.querySelectorAll('.report-item');
+      const visibleCountEl = document.getElementById('visibleCount');
+      const noResultsEl = document.getElementById('noResults');
+      const backToTopBtn = document.getElementById('backToTop');
+      const laporanForm = document.getElementById('laporanForm');
+      const submitAlert = document.getElementById('submitAlert');
+
+      // Scroll effect & back to top
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 250) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Filter logic
+      function filterReports() {
+        const query = searchInput.value.toLowerCase().trim();
+        const selectedCategory = categoryFilter.value;
+        const selectedStatus = statusFilter.value;
+
+        let visibleCount = 0;
+
+        reportItems.forEach(item => {
+          const title = item.querySelector('.card-title').textContent.toLowerCase();
+          const desc = item.querySelector('.card-text').textContent.toLowerCase();
+          const category = item.getAttribute('data-category');
+          const status = item.getAttribute('data-status');
+
+          const matchSearch = query === '' || title.includes(query) || desc.includes(query);
+          const matchCategory = selectedCategory === 'all' || category === selectedCategory;
+          const matchStatus = selectedStatus === 'all' || status === selectedStatus;
+
+          if (matchSearch && matchCategory && matchStatus) {
+            item.style.display = '';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        visibleCountEl.textContent = visibleCount;
+
+        if (visibleCount === 0) {
+          noResultsEl.classList.remove('d-none');
+        } else {
+          noResultsEl.classList.add('d-none');
+        }
+      }
+
+      searchInput.addEventListener('input', filterReports);
+      categoryFilter.addEventListener('change', filterReports);
+      statusFilter.addEventListener('change', filterReports);
+
+      function resetFilters() {
+        searchInput.value = '';
+        categoryFilter.value = 'all';
+        statusFilter.value = 'all';
+        filterReports();
+      }
+
+      resetBtn.addEventListener('click', resetFilters);
+      resetFromEmptyBtn.addEventListener('click', resetFilters);
+
+      // Form submission simulation
+      laporanForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const judul = document.getElementById('modalJudul').value;
+        const kategori = document.getElementById('modalKategori').value;
+        const deskripsi = document.getElementById('modalDeskripsi').value;
+
+        // Hide modal
+        const modalEl = document.getElementById('tambahLaporanModal');
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+
+        // Create new card and prepend to container
+        const newCard = document.createElement('div');
+        newCard.className = 'col-12 col-md-6 col-lg-4 report-item animate__animated animate__fadeInDown';
+        newCard.setAttribute('data-category', kategori === 'akademik' ? 'akademik' : 'fasilitas');
+        newCard.setAttribute('data-status', 'verifikasi');
+
+        const badgeTag = kategori === 'akademik' ? 'Akademik' : 'Fasilitas';
+        const ticketNum = '#REP-' + Math.floor(1050 + Math.random() * 50);
+
+        newCard.innerHTML = `
+          <div class="card h-100 border-primary">
+            <div class="card-img-wrapper">
+              <span class="badge-overlay">
+                <i class="fa-solid fa-wrench me-1"></i> ${badgeTag}
+              </span>
+              <span class="badge-overlay-status badge-status-pending">
+                <i class="fa-solid fa-clock me-1"></i> Baru / Verifikasi
+              </span>
+              <img
+                src="./assets/images/kelas rusak.jpeg"
+                class="card-img-top"
+                alt="${judul}"
+              />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-primary">${judul}</h5>
+              <div class="card-author-meta">
+                <span>Pelapor: <a href="single-reports.html" class="card-author-name">Baraa Abyan</a></span>
+                <span>•</span>
+                <span>Baru saja</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">${deskripsi}</p>
+              <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="badge bg-light text-secondary border">${ticketNum}</span>
+                <a href="single-reports.html" class="btn btn-sm btn-primary rounded-pill">
+                  Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        const container = document.getElementById('reportsContainer');
+        container.insertBefore(newCard, container.firstChild);
+
+        // Show alert toast banner
+        submitAlert.classList.remove('d-none');
+        submitAlert.classList.add('show');
+
+        // Reset form
+        laporanForm.reset();
+        document.getElementById('namaPelapor').value = 'Baraa Abyan';
+
+        // Update count
+        filterReports();
+
+        // Scroll to top of reports
+        window.scrollTo({ top: 150, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>

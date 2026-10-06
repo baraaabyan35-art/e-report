@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Pengguna | IDN E-Report 2026</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/idn logo.png"
+      type="image/x-icon"
+    />
+
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="./assets/images/idn logo.png"
+            alt="Logo IDN"
+            class="brand-icon"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-primary lh-1">IDN E-Report</span>
+            <small class="text-muted" style="font-size: 0.68rem; letter-spacing: 0.05em;">SMK IDN 2026</small>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-lg-2 pt-3 pt-lg-0 text-center align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reports.html">Semua Laporan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="panduan.html">
+                <i class="fa-solid fa-book-open me-1"></i> Panduan Pengguna
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#faq">FAQ</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a class="btn btn-primary nav-cta" href="reports.html">
+                <i class="fa-solid fa-plus-circle me-1"></i> Buat Laporan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section Panduan -->
+      <section class="hero-section pb-5">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-7 text-center text-lg-start animate__animated animate__fadeInLeft">
+              <span class="badge-pill-custom badge-tag-academic mb-3">
+                <i class="fa-solid fa-graduation-cap"></i> Pusat Panduan & Edukasi Pelapor
+              </span>
+              <h1 class="hero-title">
+                Panduan Pengguna <br />
+                <span class="text-primary">IDN E-Report 2026</span>
+              </h1>
+              <p class="hero-lead">
+                Ikuti alur terstruktur untuk menyampaikan laporan kendala fasilitas, akademik, dan sarana asrama agar cepat ditangani tim teknisi.
+              </p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a class="btn btn-primary btn-pill px-4 py-2" href="#alur-pelaporan">
+                  <i class="fa-solid fa-route me-2"></i> Pelajari 4 Langkah
+                </a>
+                <a class="btn btn-outline-primary btn-pill px-4 py-2" href="#sla-section">
+                  <i class="fa-solid fa-clock-rotate-left me-2"></i> Standar Waktu SLA
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-5 text-center animate__animated animate__fadeInRight">
+              <img
+                src="./assets/images/about pic.png"
+                alt="Panduan Pengguna IDN"
+                class="img-fluid"
+                style="max-height: 380px; object-fit: contain;"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Langkah Alur Pelaporan Section -->
+      <section id="alur-pelaporan" class="bg-white">
+        <div class="container">
+          <div class="text-center max-w-2xl mx-auto mb-5" data-aos="fade-up" data-aos-duration="700">
+            <span class="badge-pill-custom badge-tag-facility mb-2">
+              <i class="fa-solid fa-list-check"></i> Alur Kerja Sistem
+            </span>
+            <h2 class="display-6 fw-bold">4 Langkah Mudah Menyampaikan Laporan</h2>
+            <p class="text-muted">
+              Laporan yang jelas dan didukung bukti nyata akan diprioritaskan untuk penanganan segera oleh tim Sarpras.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Step 1 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="step-card d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="service-icon-box mb-0" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                    <i class="fa-solid fa-camera"></i>
+                  </div>
+                  <div class="step-number">01</div>
+                </div>
+                <h5 class="fw-bold mb-2">Identifikasi & Foto Bukti</h5>
+                <p class="text-muted small flex-grow-1">
+                  Ambil foto kondisi kerusakan fisik yang jelas. Catat nomor ruang, lantai gedung, atau identitas perangkat yang terkendala.
+                </p>
+                <div class="p-2 rounded bg-light border text-muted small mt-3">
+                  <i class="fa-solid fa-lightbulb text-warning me-1"></i> Tips: Pastikan pencahayaan cukup dan objek kerusakan terlihat fokus.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="step-card d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="service-icon-box mb-0" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div>
+                  <div class="step-number">02</div>
+                </div>
+                <h5 class="fw-bold mb-2">Pilih Kategori Tepat</h5>
+                <p class="text-muted small flex-grow-1">
+                  Pilih kelompok masalah yang sesuai: <strong>Fasilitas</strong> (AC/kran/listrik), <strong>Akademik</strong> (Lab/modul), atau <strong>Aspirasi</strong>.
+                </p>
+                <div class="p-2 rounded bg-light border text-muted small mt-3">
+                  <i class="fa-solid fa-circle-check text-success me-1"></i> Membantu sistem meneruskan tiket ke teknisi yang tepat.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <div class="step-card d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="service-icon-box mb-0" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                  <div class="step-number">03</div>
+                </div>
+                <h5 class="fw-bold mb-2">Isi Deskripsi Kronologi</h5>
+                <p class="text-muted small flex-grow-1">
+                  Tuliskan judul singkat dan padat. Jelaskan kronologi kejadian, perkiraan waktu kerusakan, dan dampaknya pada kegiatan belajar.
+                </p>
+                <div class="p-2 rounded bg-light border text-muted small mt-3">
+                  <i class="fa-solid fa-pen-clip text-primary me-1"></i> Contoh: "AC Ruang Lab 3 Menetes di atas Meja Komputer".
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="step-card d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="service-icon-box mb-0" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                  </div>
+                  <div class="step-number">04</div>
+                </div>
+                <h5 class="fw-bold mb-2">Pantau Status Tiket</h5>
+                <p class="text-muted small flex-grow-1">
+                  Kirimkan laporan dan dapatkan nomor tiket. Pantau pembaruan status perbaikan secara transparan hingga dinyatakan rampung.
+                </p>
+                <div class="p-2 rounded bg-light border text-muted small mt-3">
+                  <i class="fa-solid fa-bell text-info me-1"></i> Status tiket otomatis berganti saat teknisi memulai perbaikan.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLA (Standar Waktu Tanggap) Section -->
+      <section id="sla-section" class="py-5">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-duration="800">
+              <span class="badge-pill-custom badge-tag-urgent mb-2">
+                <i class="fa-solid fa-stopwatch"></i> Standar Operasional (SLA)
+              </span>
+              <h2 class="display-6 fw-bold mb-3">Waktu Tanggap & Penanganan</h2>
+              <p class="text-muted lh-lg mb-4">
+                Setiap kategori laporan memiliki batas waktu standar penanganan (Service Level Agreement) agar perbaikan dilakukan secara terukur dan akuntabel.
+              </p>
+
+              <div class="p-3 rounded-3 bg-white border shadow-sm mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-danger-subtle text-danger p-3">
+                    <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Kategori Darurat</h6>
+                    <small class="text-muted">Kebocoran air pipa utama, bau hangus listrik, atau korsleting ditangani &lt; 2 Jam.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3 bg-white border shadow-sm">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-primary-subtle text-primary p-3">
+                    <i class="fa-solid fa-headset fa-lg"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Dukungan Darurat Sarpras</h6>
+                    <small class="text-muted">Hubungi hotline WhatsApp Sarpras bila terjadi kondisi kritis di lingkungan asrama.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+              <div class="sla-box">
+                <div class="p-3 bg-light border-bottom fw-bold text-slate-800 d-flex justify-content-between align-items-center">
+                  <span><i class="fa-solid fa-table-list text-primary me-2"></i> Matriks Target Penyelesaian</span>
+                  <span class="badge bg-primary text-white">Standar IDN 2026</span>
+                </div>
+
+                <!-- SLA Item 1 -->
+                <div class="sla-item">
+                  <div>
+                    <div class="fw-bold text-slate-900">Kebocoran Air & Sanitasi (Tempat Wudhu/Toilet)</div>
+                    <small class="text-muted">Kran patah, pipa mampet, genangan air pelataran masjid</small>
+                  </div>
+                  <div class="text-end">
+                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle fw-bold">
+                      &lt; 2 Jam Kerja
+                    </span>
+                  </div>
+                </div>
+
+                <!-- SLA Item 2 -->
+                <div class="sla-item">
+                  <div>
+                    <div class="fw-bold text-slate-900">Fasilitas Elektronik Kelas (AC & Proyektor)</div>
+                    <small class="text-muted">AC bocor, proyektor mati, stop kontak kabel hangus</small>
+                  </div>
+                  <div class="text-end">
+                    <span class="badge bg-warning-subtle text-warning border border-warning-subtle fw-bold">
+                      &lt; 12 Jam Kerja
+                    </span>
+                  </div>
+                </div>
+
+                <!-- SLA Item 3 -->
+                <div class="sla-item">
+                  <div>
+                    <div class="fw-bold text-slate-900">Jaringan Internet & Server Lab Komputer</div>
+                    <small class="text-muted">Router Wi-Fi offline, switch ethernet LAN bermasalah</small>
+                  </div>
+                  <div class="text-end">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-bold">
+                      &lt; 24 Jam Kerja
+                    </span>
+                  </div>
+                </div>
+
+                <!-- SLA Item 4 -->
+                <div class="sla-item">
+                  <div>
+                    <div class="fw-bold text-slate-900">Perabot Fisik (Meja, Kursi, Pintu Asrama)</div>
+                    <small class="text-muted">Kunci pintu longgar, kursi rusak hidrolik, engsel jendela</small>
+                  </div>
+                  <div class="text-end">
+                    <span class="badge bg-success-subtle text-success border border-success-subtle fw-bold">
+                      1 - 2 Hari Kerja
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panduan Foto Bukti & Do's and Don'ts Section -->
+      <section class="bg-white">
+        <div class="container">
+          <div class="text-center max-w-2xl mx-auto mb-5" data-aos="fade-up" data-aos-duration="700">
+            <span class="badge-pill-custom badge-tag-academic mb-2">
+              <i class="fa-solid fa-clipboard-check"></i> Standar Kualitas Bukti
+            </span>
+            <h2 class="display-6 fw-bold">Pedoman Pengambilan Bukti & Etika</h2>
+            <p class="text-muted">
+              Pastikan laporan memenuhi kaidah objektivitas dan dapat dipertanggungjawabkan kebenarannya.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Do's -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="card h-100 p-4 border-success-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <h5 class="fw-bold text-success mb-0">Hal yang Dianjurkan (Do's)</h5>
+                </div>
+                <ul class="d-flex flex-column gap-3 text-slate-700 ps-3 mb-0">
+                  <li>
+                    <strong>Sebutkan lokasi spesifik:</strong> Cantumkan nama gedung, nomor lantai, dan posisi ruangan secara detil.
+                  </li>
+                  <li>
+                    <strong>Foto jarak fokus & konteks:</strong> Ambil foto yang memperlihatkan titik kerusakan sekaligus area sekitarnya agar teknisi mudah mencari posisi unit.
+                  </li>
+                  <li>
+                    <strong>Gunakan bahasa santun & objektif:</strong> Uraikan masalah apa adanya tanpa melebih-lebihkan fakta.
+                  </li>
+                  <li>
+                    <strong>Prioritaskan keselamatan:</strong> Bila kerusakan melibatkan arus listrik terbuka atau benda tajam, jangan disentuh dan segera infokan ke asatidz.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Don'ts -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="card h-100 p-4 border-danger-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <h5 class="fw-bold text-danger mb-0">Hal yang Dilarang (Don'ts)</h5>
+                </div>
+                <ul class="d-flex flex-column gap-3 text-slate-700 ps-3 mb-0">
+                  <li>
+                    <strong>Mengirim laporan ganda (Spamming):</strong> Jangan mengirimkan formulir berulang kali untuk kerusakan yang sama.
+                  </li>
+                  <li>
+                    <strong>Foto tidak relevan atau buram:</strong> Hindari mengunggah foto selfie, gambar dari internet, atau foto blur yang tidak informatif.
+                  </li>
+                  <li>
+                    <strong>Laporan palsu / prank:</strong> Pembuatan laporan fiktif akan dikenai sanksi kedisiplinan santri oleh bagian kepengasuhan.
+                  </li>
+                  <li>
+                    <strong>Memperbaiki sendiri secara berbahaya:</strong> Jangan membongkar panel instalasi listrik tegangan tinggi secara mandiri tanpa pengawasan teknisi.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Panduan Pengguna Section -->
+      <section>
+        <div class="container">
+          <div class="row align-items-center justify-content-between gy-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="800">
+              <span class="badge-pill-custom badge-tag-facility mb-2">
+                <i class="fa-solid fa-circle-question"></i> Tanya Jawab Panduan
+              </span>
+              <h2 class="display-6 fw-bold mb-3">Pertanyaan Umum Pengguna</h2>
+              <p class="text-muted lh-lg mb-4">
+                Masih ada hal yang belum jelas mengenai pengoperasian aplikasi atau status pengaduan Anda?
+              </p>
+              <a href="reports.html" class="btn btn-primary btn-pill px-4">
+                <i class="fa-solid fa-paper-plane me-2"></i> Buat Laporan Sekarang
+              </a>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+              <div class="accordion" id="guideAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="guideHeadingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#guideFaq1"
+                      aria-expanded="true"
+                      aria-controls="guideFaq1"
+                    >
+                      <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                      Apakah laporan dapat dikirimkan dengan menjaga privasi identitas santri?
+                    </button>
+                  </h2>
+                  <div
+                    id="guideFaq1"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="guideHeadingOne"
+                    data-bs-parent="#guideAccordion"
+                  >
+                    <div class="accordion-body">
+                      Bisa. Saat memilih kategori di formulir laporan, Anda dapat memilih opsi <strong>"Privasi Terjaga / Aspirasi Khusus"</strong>. Identitas Anda akan dienkripsi dan hanya dapat ditinjau oleh pimpinan sekolah yang berwenang demi kenyamanan dan perlindungan pelapor.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="guideHeadingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#guideFaq2"
+                      aria-expanded="false"
+                      aria-controls="guideFaq2"
+                    >
+                      <i class="fa-solid fa-clock-rotate-left text-primary me-2"></i>
+                      Bagaimana jika laporan saya belum ditindaklanjuti melebihi batas SLA?
+                    </button>
+                  </h2>
+                  <div
+                    id="guideFaq2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="guideHeadingTwo"
+                    data-bs-parent="#guideAccordion"
+                  >
+                    <div class="accordion-body">
+                      Apabila batas waktu SLA terlampaui tanpa ada perubahan status, Anda dapat mengirimkan komentar pengingat langsung di halaman detail tiket atau menghubungi nomor hotline WhatsApp Sarpras dengan menyertakan Nomor Tiket (contoh: `#REP-1048`).
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="guideHeadingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#guideFaq3"
+                      aria-expanded="false"
+                      aria-controls="guideFaq3"
+                    >
+                      <i class="fa-solid fa-comment-dots text-primary me-2"></i>
+                      Bisakah saya memberikan informasi tambahan setelah laporan terkirim?
+                    </button>
+                  </h2>
+                  <div
+                    id="guideFaq3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="guideHeadingThree"
+                    data-bs-parent="#guideAccordion"
+                  >
+                    <div class="accordion-body">
+                      Ya. Anda cukup membuka tiket laporan Anda di halaman Semua Laporan, lalu tuliskan pembaruan kondisi atau klarifikasi tambahan melalui kolom <strong>Diskusi & Pembaruan Tiket</strong> di bagian bawah detail laporan.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="guideHeadingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#guideFaq4"
+                      aria-expanded="false"
+                      aria-controls="guideFaq4"
+                    >
+                      <i class="fa-solid fa-moon text-primary me-2"></i>
+                      Bagaimana bila fasilitas mengalami kerusakan saat malam hari atau akhir pekan?
+                    </button>
+                  </h2>
+                  <div
+                    id="guideFaq4"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="guideHeadingFour"
+                    data-bs-parent="#guideAccordion"
+                  >
+                    <div class="accordion-body">
+                      Sistem IDN E-Report menerima pelaporan selama 24 jam setiap hari. Untuk kendala darurat pada malam hari (seperti listrik asrama padam total atau pipa air jebol), tim piket teknisi sarpras siap merespon langsung di lapangan.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-lg-4 text-white">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <img
+                class="rounded"
+                src="./assets/images/logo idn footer.jpeg"
+                width="36"
+                height="36"
+                alt="Logo IDN"
+              />
+              <span class="footer-brand-title">IDN E-Report</span>
+            </div>
+            <p class="footer-desc">
+              Portal pengaduan fasilitas dan akademik resmi SMK IDN Boarding School. Mewujudkan lingkungan belajar yang nyaman, modern, dan tanggap sarana bagi seluruh santri.
+            </p>
+            <div class="d-flex gap-2 mt-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                <i class="fa-solid fa-code me-1"></i> Edisi 2026
+              </span>
+              <span class="badge bg-success-subtle text-success border border-success-subtle">
+                <i class="fa-solid fa-server me-1"></i> Sistem Aktif
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <h5 class="footer-heading">Navigasi</h5>
+            <div class="d-flex flex-column gap-2">
+              <a class="footer-link" href="index.html">
+                <i class="fa-solid fa-angle-right"></i> Beranda
+              </a>
+              <a class="footer-link" href="index.html#about">
+                <i class="fa-solid fa-angle-right"></i> Tentang Kami
+              </a>
+              <a class="footer-link" href="index.html#services">
+                <i class="fa-solid fa-angle-right"></i> Layanan
+              </a>
+              <a class="footer-link" href="reports.html">
+                <i class="fa-solid fa-angle-right"></i> Semua Laporan
+              </a>
+              <a class="footer-link text-white fw-bold" href="panduan.html">
+                <i class="fa-solid fa-book-open"></i> Panduan Pengguna
+              </a>
+              <a class="footer-link" href="index.html#faq">
+                <i class="fa-solid fa-angle-right"></i> FAQ
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-heading">Kontak & Helpdesk</h5>
+            <div class="d-flex flex-column">
+              <a class="footer-contact-item" href="mailto:reportidn@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>reportidn@gmail.com</span>
+              </a>
+              <a
+                target="_blank"
+                class="footer-contact-item"
+                href="https://wa.me/+6282125748970"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+62 821-2574-8970 (Hotline Sarpras)</span>
+              </a>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. Raya Dayeuh, Desa Sukanegara, Kec. Jonggol, Kab. Bogor, Jawa Barat 16830.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 copyright-text">
+          <p class="mb-0">
+            &copy; 2026 IDN E-Report. Dikelola & Diterbitkan oleh <strong class="text-white">Baraa Abyan</strong> bersama Tim RPL C Class.
+          </p>
+          <p class="mb-0 text-white-50">
+            SMK IDN Boarding School Jonggol. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" title="Kembali ke atas">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 80,
+      });
+
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 250) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
